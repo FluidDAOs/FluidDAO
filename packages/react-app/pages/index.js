@@ -25,7 +25,7 @@ function Home({ web3 }) {
         </div>
         <div className="text-center">
           <Contract
-            name="YourContract"
+            name="SuperDao"
             signer={web3.userSigner}
             provider={web3.localProvider}
             address={web3.address}
