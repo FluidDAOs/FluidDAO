@@ -1,6 +1,9 @@
 // deploy/00_deploy_your_contract.js
 
 //const { ethers } = require("hardhat");
+// We'd need to create the host and the coin, or use an existing coin and import it in the contract.
+const host = "0xEB796bdb90fFA0f28255275e16936D25d3418603";
+const fDAIx = "0x5D8B4C2554aeB7e86F387B4d6c00Ac33499Ed01f";
 
 module.exports = async ({ getNamedAccounts, deployments }) => {
   const { deploy } = deployments;
@@ -8,7 +11,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
   await deploy("SuperDao", {
     // Learn more about args here: https://www.npmjs.com/package/hardhat-deploy#deploymentsdeploy
     from: deployer,
-    // args: ["SuperFluidDAO", "sfd", deployer, ethers.utils.parseEther("1.5")],
+    args: [host, fDAIx],
     log: true,
   });
 

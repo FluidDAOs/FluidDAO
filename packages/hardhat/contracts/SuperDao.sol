@@ -1,21 +1,12 @@
 // This smart contract was developed by BrickDAO, their implementation of superfluid was better than the solution we had.
-
-pragma solidity >=0.8.0 <0.9.0;
-//SPDX-License-Identifier: MIT
-
-import "hardhat/console.sol";
-
-import {
-    SuperAppBase,
-} from "@superfluid-finance/ethereum-contracts/contracts/apps/SuperAppBase.sol";
-import {ISuperfluid, ISuperToken, ISuperApp, ISuperAgreement, SuperAppDefinitions} from "@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluid.sol"; //"@superfluid-finance/ethereum-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluid.sol";
-
-import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
-
-
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0;
+
+import { SuperAppDefinitions } from "@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/Definitions.sol";
+import { ISuperfluid } from "@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluid.sol";
+import { ISuperToken } from "@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperToken.sol";
+import { ISuperApp } from "@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperApp.sol";
+import { ISuperAgreement } from "@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperAgreement.sol";
 
 
 import {CFAv1Library} from "@superfluid-finance/ethereum-contracts/contracts/apps/CFAv1Library.sol";
@@ -27,7 +18,7 @@ import {SuperAppBase} from "@superfluid-finance/ethereum-contracts/contracts/app
 
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
-contract SuperQuadraticFunding is SuperAppBase, Ownable {
+contract SuperDao is SuperAppBase, Ownable {
     using CFAv1Library for CFAv1Library.InitData;
     using IDAv1Library for IDAv1Library.InitData;
 

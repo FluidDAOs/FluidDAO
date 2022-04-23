@@ -7,9 +7,9 @@ use(solidity);
 describe("My Dapp", function () {
   let myContract;
 
-  describe("YourContract", function () {
+  describe("SuperDao", function () {
     it("Should deploy YourContract", async function () {
-      const YourContract = await ethers.getContractFactory("YourContract");
+      const YourContract = await ethers.getContractFactory("SuperDao");
 
       myContract = await YourContract.deploy();
     });
